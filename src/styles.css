@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.drag-wrapper {
+    -webkit-app-region: drag;
+    display: inline-block;
+}
+
+.widget-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 12px;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 6px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+    -webkit-app-region: no-drag;
+}
+
+.icon-button img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.15));
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.icon-button:hover img {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+.icon-button:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(60, 60, 60, 0.9);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 0.15s forwards ease-out;
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
