@@ -1,0 +1,15 @@
+{
+  "name": "copy-widget",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.6"
+  }
+}
