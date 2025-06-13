@@ -116,3 +116,5 @@ MIT License
 ## 🙌 Contributions
 
 Feel free to open issues or submit PRs. Ideas and suggestions are welcome!
+
+## Made with ❤️ by GodleoN 
